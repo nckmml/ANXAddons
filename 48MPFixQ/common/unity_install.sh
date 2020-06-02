@@ -10,6 +10,9 @@ then
 elif [ $ROPRODEV = laurel_sprout ]
 then
     mv $TMPDIR/system/laurel_sprout/* $TMPDIR/system
+elif [ $ROPRODEV = curtana ]
+then
+    mv $TMPDIR/system/curtana/* $TMPDIR/system
 else
     mv $TMPDIR/system/imx/* $TMPDIR/system
 fi
@@ -17,6 +20,7 @@ fi
 rm -rf $TMPDIR/system/imx/
 rm -rf $TMPDIR/system/samsung/
 rm -rf $TMPDIR/system/laurel_sprout/
+rm -rf $TMPDIR/system/curtana/
 
 
 MNAME=$(grep_prop name $TMPDIR/module.prop)
